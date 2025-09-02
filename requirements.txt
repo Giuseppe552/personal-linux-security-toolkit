@@ -1,3 +1,6 @@
 # Requirements
 
-This file lists the dependencies for the toolkit.
+# For subprocess, ip, ss commands, and general Python standard libraries.
+# Add third-party dependencies below if you extend functionality:
+# rich
+# scapy
