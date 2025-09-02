@@ -13,10 +13,12 @@ Great for personal use, learning, or showing security initiative to employers!
 - Easy-to-read security report
 - Self-contained and documented for replication
 
-## One-line Quickstart
+## Quickstart
+
+Just copy and paste this into your terminal to set up and run the toolkit:
 
 ```bash
-git clone https://github.com/Giuseppe552/personal-linux-security-toolkit.git && cd personal-linux-security-toolkit && pip install -r requirements.txt && sudo python3 toolkit.py
+sudo apt update && sudo apt install -y git python3-pip && git clone https://github.com/Giuseppe552/personal-linux-security-toolkit.git && cd personal-linux-security-toolkit && pip install -r requirements.txt && sudo python3 toolkit.py --all
 ```
 
 > **Note:** Some scans require `sudo` (admin privileges) for full results.
