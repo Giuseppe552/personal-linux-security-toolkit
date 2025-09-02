@@ -4,10 +4,10 @@ Main Toolkit for Personal Linux Security
 This script orchestrates all security checks:
 - Network inspection
 - System scanning
-- Report generation
+- Report generation with color output and file saving
 
 Usage:
-    python toolkit.py [--scan] [--network] [--report] [--all]
+    python3 toolkit.py [--scan] [--network] [--report] [--all]
 
 Author: Giuseppe552
 """
@@ -27,20 +27,16 @@ def main():
 
     scan_results = None
     network_results = None
-    report = None
 
     if args.all or args.scan:
         scan_results = run_scan()
-        print("[*] System scan completed.")
 
     if args.all or args.network:
         network_results = run_network_checks()
-        print("[*] Network inspection completed.")
 
     if args.all or args.report:
         report = generate_report(scan_results, network_results)
-        print("[*] Report generated:")
-        print(report)
+        # Terminal output handled by Rich inside report.generate_report
 
 if __name__ == "__main__":
     main()
